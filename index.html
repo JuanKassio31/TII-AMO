@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tii amo site</title>
+    <style>
+        /* Reset básico para garantir uma aparência consistente */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Estilo para a imagem de fundo */
+        body {
+            background: url('./img/WhatsApp Image 2024-08-15 at 21.52.38.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Love Story', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza horizontalmente */
+            justify-content: center; /* Centraliza verticalmente */
+            overflow: hidden; /* Para evitar barras de rolagem indesejadas */
+        }
+
+        /* Estilo para o painel de conteúdo */
+        .painel {
+            width: 500px;
+            max-width: 90%;
+            border-radius: 20px;
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+            position: relative;
+        }
+
+        /* Estilo para os títulos */
+        .painel h1 {
+            font-size: 2em;
+            margin: 0;
+            color: red;
+        }
+
+        .painel h2 {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: red;
+        }
+
+        /* Estilo para os botões */
+        .painel button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s, transform 0.3s; /* Adicionado para a transformação */
+        }
+
+        .painel button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo para o botão desativado */
+        .painel button:disabled {
+            background-color: #6c757d; /* Cor de fundo para o botão desativado */
+            cursor: not-allowed; /* Cursor de "não permitido" */
+            color: #fff; /* Cor do texto do botão desativado */
+        }
+
+        /* Estilo para o botão "NÃO" com transformação */
+        #naoButton {
+            transition: transform 0.3s; /* Adiciona transição suave */
+        }
+
+        #naoButton:hover {
+            transform: translateY(-50px); /* Move o botão para cima */
+        }
+
+        /* Estilo para a mensagem final */
+        .mensagem-final {
+            display: none; /* Inicialmente oculto */
+            font-size: 2em;
+            color: red;
+            text-align: center;
+        }
+
+        /* Estilo para o player de música */
+        .music-player {
+            width: 100%;
+            background-color: #fff; /* Opcional: para destacar o player */
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1; /* Garantir que o player fique acima da imagem de fundo */
+        }
+
+        /* Definindo a fonte personalizada */
+        @font-face {
+            font-family: 'Love Story';
+            src: url('./fontes/love story ttf.ttf') format('truetype');
+        }
+    </style>
+</head>
+
+<body>
+    <div class="painel">
+        <h1>Je t'aime d'ici jusqu'à la lune</h1>
+        <h2>Quer namorar comigo Mon Amour?</h2>
+        <button id="simButton">SIM</button>
+        <button id="naoButton" disabled>NÃO</button>
+    </div>
+    
+    <div class="mensagem-final" id="mensagemFinal">
+        Tii amo daqui até a lua
+    </div>
+    
+    <script>
+        document.getElementById('simButton').addEventListener('click', function() {
+            // Oculta o painel
+            document.querySelector('.painel').style.display = 'none';
+            // Exibe a mensagem final
+            document.getElementById('mensagemFinal').style.display = 'block';
+            // Após um breve atraso para permitir que a mensagem seja exibida
+            setTimeout(function() {
+                window.location.href = 'https://youtu.be/6w3uAKabfFg?si=4og5t4LJP9YWVqJ-';
+            }, 2000); // Atraso de 2 segundos
+        });
+    </script>
+</body>
+
+</html>
